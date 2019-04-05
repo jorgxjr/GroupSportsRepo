@@ -1,0 +1,38 @@
+﻿@model GroupSportsWeb.ViewModels.LstTeamViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+   
+
+@foreach (var item in Model.lstTeam) {
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => item.teamName)
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.teamName)
+        </td>
+        <th>
+            @Html.DisplayNameFor(model => item.coach)
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.coach)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+        </td>
+    </tr>
+}
+
+</table>

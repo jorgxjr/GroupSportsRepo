@@ -1,0 +1,70 @@
+﻿@model GroupSports.DL.DM.trainingPlan
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<div class="content-page">
+
+    <div style="margin: 30px">
+        <h4>trainingPlan</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.startDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.startDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.endDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.endDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.available)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.available)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.athelete.id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.athelete.id)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.coach.id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.coach.id)
+            </dd>
+
+        </dl>
+    </div>
+    <p style="margin: 30px">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+
+</div>

@@ -1,0 +1,68 @@
+﻿@model GroupSportsWeb.ViewModels.SpeedTestViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="content-page">
+    <h2>Create</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>speedTest</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.meters, htmlAttributes: new { @class = "control-label col-md-2"},labelText:"Metros")
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.meters, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.meters, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.hours, htmlAttributes: new { @class = "control-label col-md-2"}, labelText: "Horas")
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.hours, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.hours, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.minutes, htmlAttributes: new { @class = "control-label col-md-2" }, labelText: "Minutos")
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.minutes, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.minutes, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.seconds, htmlAttributes: new { @class = "control-label col-md-2" }, labelText: "Segundos")
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.seconds, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.seconds, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.milliseconds, htmlAttributes: new { @class = "control-label col-md-2" }, labelText: "Milisegundos")
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.milliseconds, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.milliseconds, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+    </div>

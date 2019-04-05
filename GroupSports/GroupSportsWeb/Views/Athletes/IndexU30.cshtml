@@ -1,0 +1,72 @@
+﻿@model GroupSportsWeb.ViewModels.LstAthleteViewModel
+
+@{
+    ViewBag.Title = "IndexU30";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>IndexU30</h2>
+
+<div class="content-page">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table id="customers" class="table table-bordered">
+
+        <thead>
+            <tr>
+                <th>
+                    ID del atleta
+                </th>
+                <th>
+                    Nombres
+                </th>
+                <th>
+                    Apellidos
+                </th>
+                <th>
+                    Correo
+                </th>
+                <th>
+                    Opciones
+                </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model.lstAtletas)
+        {
+
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.id)
+                    </td>
+
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.firstName)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.lastName)
+                    </td>
+
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.emailAddress)
+                    </td>
+
+
+                    <td>
+
+                        @*@Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.id }) |*@
+                        @*@Html.ActionLink("~/Test/Index", "IndexTest", "Teams", new { id = item.id })*@
+                        <a href="  @Url.Action("Index", "SpeedTest", new { id = item.id })">Ver más</a>
+                    </td>
+                </tr>
+            </tbody>
+        }
+
+    </table>
+</div>

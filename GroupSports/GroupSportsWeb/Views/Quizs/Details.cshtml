@@ -1,0 +1,35 @@
+﻿@model GroupSports.DL.DM.quiz
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<div class="content-page">
+    <div style="margin: 30px">
+        <h4>quiz</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.quizTitle)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.quizTitle)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.date)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.date)
+            </dd>
+        </dl>
+    </div>
+    <p style="margin: 30px">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>

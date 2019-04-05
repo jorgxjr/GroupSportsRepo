@@ -1,0 +1,68 @@
+﻿@model IEnumerable<GroupSports.DL.DM.DTO.SessionDTO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<div class="content-page">
+
+    @*<p  style="margin-top: 30px; margin-left: 15px; margin-right: 15px">
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+    <table class="table" style="margin-top: 30px; margin-left: 15px">
+        <tr>
+            <th>
+               ID
+            </th>
+            <th>
+               Día de la Sesión
+            </th>
+            <th>
+                   Usuario
+            </th>
+            <th>
+                Plan de Trabajo
+            </th>
+            <th>
+                Mesociclo
+            </th>
+            <th>
+               Turno
+            </th>
+            
+        </tr>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sessionDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trainingPlanName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mesocycleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.shift.shiftName)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id }) |
+                @Html.ActionLink("Bitacora", "Index", "BinnacleDetails", new { id = item.id }, item)
+            </td>
+        </tr>
+        }
+
+    </table>
+
+</div>

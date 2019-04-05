@@ -1,0 +1,97 @@
+﻿@model GroupSportsWeb.ViewModels.WeightTestBySessionViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    .btn-group button {
+        background-color: #4CAF50; /* Green background */
+        border: 1px solid green; /* Green border */
+        color: white; /* White text */
+        padding: 10px 24px; /* Some padding */
+        cursor: pointer; /* Pointer/hand icon */
+        float: left; /* Float the buttons side by side */
+    }
+
+    /* Clear floats (clearfix hack) */
+    .btn-group:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .btn-group button:not(:last-child) {
+        border-right: none; /* Prevent double borders */
+    }
+
+    /* Add a background color on hover */
+    .btn-group button:hover {
+        background-color: #3e8e41;
+    }
+</style>
+<h2>Index</h2>
+<div class="content-page">
+    <div class="btn-group" style="margin-top:30px; margin-bottom:20px; width:100%">
+        <button onclick="location.href='@Url.Action("Index", "SpeedTest", new { id = Session["aID"]})';return false;" style="width:14.28%">Rapidez</button>
+        <button onclick="location.href='@Url.Action("Index", "Wearable", new { id = Session["aID"]})';return false;" style="width:14.28%">Wearable</button>
+        <button onclick="location.href='@Url.Action("Index", "JumpTest", new { id = Session["aID"]})';return false;" style="width:14.28%">Salto</button>
+        <button onclick="location.href='@Url.Action("Index", "StrengthTest", new { id = Session["aID"]})';return false;" style="width:14.28%">Fuerza</button>
+        <button onclick="location.href='@Url.Action("Index", "WeightTestBySession", new { id = Session["aID"]})';return false;" style="width:14.28%">Peso Corporal</button>
+        <button onclick="location.href='@Url.Action("Index", "ShotPutTest", new { id = Session["aID"]})';return false;" style="width:14.28%">Lanzamiento</button>
+        <button onclick="location.href='@Url.Action("Index", "AntropometricTest", new { id = Session["aID"]})';return false;" style="width:14.28%">Antropométrico</button>
+
+    </div>
+
+    <table class="table">
+        @foreach (var group in Model.listWeightTestBySession.GroupBy(i => i.session))
+        {
+            <tr>
+                <th style="font-size:24px">
+                    @{
+                        var Fechaa = "Fecha: " + group.Key.sessionDay.ToShortDateString();
+                        @Html.DisplayFor(m => Fechaa)
+                    }
+                </th>
+
+            </tr>
+
+            foreach (var item in group)
+            {
+
+                <tr>
+                    <td>
+                        @{
+                            var Turnoo = "Turno: " + item.session.shift.shiftName;
+                            @Html.DisplayFor(m => Turnoo)
+                        }
+                    </td>
+                    <td>
+                        @{
+                            var PesoAntes = "Peso antes: " + item.weightBefore + " kg";
+                            @Html.DisplayFor(m => PesoAntes)
+                        }
+                    </td>
+                    <td>
+                        @{
+                            var PesoDespues = "Peso después: " + item.weightAfter + " kg";
+                            @Html.DisplayFor(m => PesoDespues)
+                        }
+                    </td>
+                </tr>
+
+            }
+
+        }
+
+    </table>
+
+    <div class="btn-group" style="margin-top:30px; margin-bottom:20px; width:100%">
+        <button onclick="location.href='@Url.Action("Index", "SpeedTest", new { id = Session["aID"]})';return false;" style="width:25%">Test</button>
+        <button onclick="location.href='@Url.Action("Index", "AthleteDetails", new { id = Session["aID"]})';return false;" style="width:25%">Detalles</button>
+        <button onclick="location.href='@Url.Action("Index", "Foda", new { id = Session["aID"]})';return false;" style="width:25%">Foda</button>
+        <button onclick="location.href='@Url.Action("Index", "AthleteAchievement", new { id = Session["aID"]})';return false;" style="width:25%">Logros</button>
+
+
+    </div>
+
+</div>

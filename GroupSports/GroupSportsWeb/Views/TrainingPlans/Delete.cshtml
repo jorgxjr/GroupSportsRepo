@@ -1,0 +1,77 @@
+﻿@model GroupSports.DL.DM.trainingPlan
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+<div class="content-page">
+
+    <div style="margin-top: 30px; margin-left: 15px">
+        <h3>Are you sure you want to delete this?</h3>
+        <h4>trainingPlan</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.startDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.startDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.endDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.endDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.available)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.available)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.athelete.id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.athelete.id)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.coach.id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.coach.id)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+
+</div>

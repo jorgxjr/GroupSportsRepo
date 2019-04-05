@@ -1,0 +1,44 @@
+﻿@model IEnumerable<GroupSports.DL.DM.quiz>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<div class="content-page">
+    <p style="margin-top: 30px; margin-left: 15px; margin-right: 15px">
+        @*@Html.ActionLink("Nueva Encuesta", "Create")*@
+    </p>
+    <table class="table" style="margin-left: 15px">
+        <tr>
+            <th>
+                Título
+            </th>
+            <th>
+                Fecha
+            </th>
+            @*<th>
+                Opciones
+            </th>*@
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.quizTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date)
+                </td>
+                @*<td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Borrar", "Delete", new { id = item.id })
+                </td>*@
+            </tr>
+        }
+
+    </table>
+</div>

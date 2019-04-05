@@ -1,0 +1,56 @@
+﻿@model GroupSportsWeb.ViewModels.AnnouncementViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div class="content-page">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        @foreach (var item in Model.listAnnouncementsDTO)
+        {
+
+        <tr>
+
+            <th>
+                Título:
+            </th>
+            <td>
+                @Html.DisplayFor(m => item.announcementTitle)
+            </td>
+
+            <th>
+                Detalles:
+            </th>
+            <td>
+                @Html.DisplayFor(m => item.announcementDetail)
+            </td>
+
+
+            <th>
+                Enviado a:
+            </th>
+
+            @foreach (var a in item.athletesNames)
+    {
+        <td>@a</td>
+        
+
+}
+
+
+        </tr>
+
+
+
+
+        }
+
+
+    </table>
+    @*<button onclick="location.href='@Url.Action("Create", "SpeedTest", new { id = Session["userID2"]})';return false;">Agregar Test</button>*@
+
+</div>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3248df8518a34f9f9673c7f6cdab9e66" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="group_sportsModel.announcement" Width="1.5" PointX="5.25" PointY="87.375" />
+        <EntityTypeShape EntityType="group_sportsModel.announcementByAthlete" Width="1.5" PointX="13.5" PointY="81.875" />
+        <EntityTypeShape EntityType="group_sportsModel.anthropometricTest" Width="1.5" PointX="5.25" PointY="61.875" />
+        <EntityTypeShape EntityType="group_sportsModel.athelete" Width="1.5" PointX="3" PointY="64.125" />
+        <EntityTypeShape EntityType="group_sportsModel.atheleteByParameter" Width="1.5" PointX="8.25" PointY="66.75" />
+        <EntityTypeShape EntityType="group_sportsModel.atheleteByTeam" Width="1.5" PointX="8.25" PointY="63.875" />
+        <EntityTypeShape EntityType="group_sportsModel.athleteAchievement" Width="1.5" PointX="11.25" PointY="61.5" />
+        <EntityTypeShape EntityType="group_sportsModel.athleteAchievementType" Width="1.5" PointX="9" PointY="51.125" />
+        <EntityTypeShape EntityType="group_sportsModel.athleteDetails" Width="1.5" PointX="5.25" PointY="95.25" />
+        <EntityTypeShape EntityType="group_sportsModel.athleteFoda" Width="1.5" PointX="5.25" PointY="66.625" />
+        <EntityTypeShape EntityType="group_sportsModel.athleteQuiz" Width="1.5" PointX="13.5" PointY="67.375" />
+        <EntityTypeShape EntityType="group_sportsModel.binnacleDetail" Width="1.5" PointX="13.5" PointY="59.125" />
+        <EntityTypeShape EntityType="group_sportsModel.coach" Width="1.5" PointX="3" PointY="73.625" />
+        <EntityTypeShape EntityType="group_sportsModel.coachByAthelete" Width="1.5" PointX="11.25" PointY="65.5" />
+        <EntityTypeShape EntityType="group_sportsModel.coachByTeam" Width="1.5" PointX="8.25" PointY="75.125" />
+        <EntityTypeShape EntityType="group_sportsModel.coachCurriculumDetail" Width="1.5" PointX="5.25" PointY="79.625" />
+        <EntityTypeShape EntityType="group_sportsModel.colorOfMood" Width="1.5" PointX="9" PointY="87.625" />
+        <EntityTypeShape EntityType="group_sportsModel.competition" Width="1.5" PointX="6" PointY="83.5" />
+        <EntityTypeShape EntityType="group_sportsModel.competitionByCoach" Width="1.5" PointX="8.25" PointY="78.25" />
+        <EntityTypeShape EntityType="group_sportsModel.competitionHurdlesTest" Width="1.5" PointX="16.5" PointY="64.5" />
+        <EntityTypeShape EntityType="group_sportsModel.competitionJumpTest" Width="1.5" PointX="19.5" PointY="75.625" />
+        <EntityTypeShape EntityType="group_sportsModel.competitionJumpTestType" Width="1.5" PointX="17.25" PointY="87.5" />
+        <EntityTypeShape EntityType="group_sportsModel.competitionLongDistanceTest" Width="1.5" PointX="13.5" PointY="71.5" />
+        <EntityTypeShape EntityType="group_sportsModel.competitionMiddleDistanceTest" Width="1.5" PointX="16.5" PointY="79.5" />
+        <EntityTypeShape EntityType="group_sportsModel.competitionRaceWalkingTest" Width="1.5" PointX="13.5" PointY="62.5" />
+        <EntityTypeShape EntityType="group_sportsModel.competitionRelaysTest" Width="1.5" PointX="13.5" PointY="75.75" />
+        <EntityTypeShape EntityType="group_sportsModel.competitionRelayType" Width="1.5" PointX="11.25" PointY="84.5" />
+        <EntityTypeShape EntityType="group_sportsModel.competitionSprintsTest" Width="1.5" PointX="10.5" PointY="79.5" />
+        <EntityTypeShape EntityType="group_sportsModel.competitionThrowsTest" Width="1.5" PointX="19.5" PointY="71.625" />
+        <EntityTypeShape EntityType="group_sportsModel.competitionThrowsTestType" Width="1.5" PointX="17.25" PointY="84.5" />
+        <EntityTypeShape EntityType="group_sportsModel.discipline" Width="1.5" PointX="0.75" PointY="63" />
+        <EntityTypeShape EntityType="group_sportsModel.fodaItemType" Width="1.5" PointX="3" PointY="61" />
+        <EntityTypeShape EntityType="group_sportsModel.jumpTest" Width="1.5" PointX="16.5" PointY="74.875" />
+        <EntityTypeShape EntityType="group_sportsModel.jumpTestType" Width="1.5" PointX="14.25" PointY="91.625" />
+        <EntityTypeShape EntityType="group_sportsModel.mesocycle" Width="1.5" PointX="10.5" PointY="57" />
+        <EntityTypeShape EntityType="group_sportsModel.mesocycleType" Width="1.5" PointX="8.25" PointY="56.75" />
+        <EntityTypeShape EntityType="group_sportsModel.mood" Width="1.5" PointX="11.25" PointY="75.125" />
+        <EntityTypeShape EntityType="group_sportsModel.parameter" Width="1.5" PointX="6" PointY="77" />
+        <EntityTypeShape EntityType="group_sportsModel.question" Width="1.5" PointX="5.25" PointY="73.75" />
+        <EntityTypeShape EntityType="group_sportsModel.questionBySession" Width="1.5" PointX="19.5" PointY="80.25" />
+        <EntityTypeShape EntityType="group_sportsModel.quiz" Width="1.5" PointX="5.25" PointY="70.5" />
+        <EntityTypeShape EntityType="group_sportsModel.quizQuestion" Width="1.5" PointX="7.5" PointY="70.75" />
+        <EntityTypeShape EntityType="group_sportsModel.quizQuestionByAthlete" Width="1.5" PointX="18.75" PointY="67.875" />
+        <EntityTypeShape EntityType="group_sportsModel.resistanceTest" Width="1.5" PointX="16.5" PointY="69.625" />
+        <EntityTypeShape EntityType="group_sportsModel.session" Width="1.5" PointX="11.25" PointY="69" />
+        <EntityTypeShape EntityType="group_sportsModel.shift" Width="1.5" PointX="9" PointY="84.625" />
+        <EntityTypeShape EntityType="group_sportsModel.shotPutTest" Width="1.5" PointX="22.5" PointY="69.75" />
+        <EntityTypeShape EntityType="group_sportsModel.shotPutType" Width="1.5" PointX="20.25" PointY="60.625" />
+        <EntityTypeShape EntityType="group_sportsModel.speedTest" Width="1.5" PointX="22.5" PointY="74.625" />
+        <EntityTypeShape EntityType="group_sportsModel.strengthTest" Width="1.5" PointX="19.5" PointY="63.875" />
+        <EntityTypeShape EntityType="group_sportsModel.strengthTestType" Width="1.5" PointX="17.25" PointY="61.625" />
+        <EntityTypeShape EntityType="group_sportsModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="group_sportsModel.team" Width="1.5" PointX="6" PointY="59" />
+        <EntityTypeShape EntityType="group_sportsModel.trainingPlan" Width="1.5" PointX="8.25" PointY="60" />
+        <EntityTypeShape EntityType="group_sportsModel.user" Width="1.5" PointX="0.75" PointY="66.125" />
+        <EntityTypeShape EntityType="group_sportsModel.week" Width="1.5" PointX="12.75" PointY="55" />
+        <EntityTypeShape EntityType="group_sportsModel.weekType" Width="1.5" PointX="10.5" PointY="53.625" />
+        <EntityTypeShape EntityType="group_sportsModel.weightTestBySession" Width="1.5" PointX="13.5" PointY="87.75" />
+        <AssociationConnector Association="group_sportsModel.FK_announcement_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_announcementByAthlete_announcement" />
+        <AssociationConnector Association="group_sportsModel.FK_announcementByAthlete_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_anthropometricTest_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_anthropometricTest_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_athelete_discipline" />
+        <AssociationConnector Association="group_sportsModel.FK_athelete_user" />
+        <AssociationConnector Association="group_sportsModel.FK_atheleteByParameter_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_atheleteByTeam_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_athleteAchievement_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_athleteDetails_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_athleteFoda_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_athleteQuiz_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_coachByAthelete_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionHurdlesTest_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionJumpTest_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionLongDistanceTest_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionMiddleDistanceTest_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionRaceWalkingTest_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionRelaysTest_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionRelaysTest_athelete1" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionRelaysTest_athelete2" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionRelaysTest_athelete3" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionSprintsTest_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionThrowsTest_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_jumpTest_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_mood_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_resistanceTest_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_session_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_shotPutTest_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_speedTest_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_strengthTest_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_trainingPlan_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_atheleteByParameter_parameter" />
+        <AssociationConnector Association="group_sportsModel.FK_atheleteByTeam_team" />
+        <AssociationConnector Association="group_sportsModel.FK_athleteAchievement_athleteAchievementType" />
+        <AssociationConnector Association="group_sportsModel.FK_athleteFoda_fodaItemType" />
+        <AssociationConnector Association="group_sportsModel.FK_athleteQuiz_quiz" />
+        <AssociationConnector Association="group_sportsModel.FK_quizQuestionByAthlete_athleteQuiz" />
+        <AssociationConnector Association="group_sportsModel.FK_binnacleDetail_session" />
+        <AssociationConnector Association="group_sportsModel.FK_coach_user" />
+        <AssociationConnector Association="group_sportsModel.FK_coachByAthelete_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_coachByTeam_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_coachCurriculumDetail_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionByCoach_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_jumpTest_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_mood_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_question_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_quiz_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_resistanceTest_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_session_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_shotPutTest_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_speedTest_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_strengthTest_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_trainingPlan_coach" />
+        <AssociationConnector Association="group_sportsModel.FK_coachByTeam_team" />
+        <AssociationConnector Association="group_sportsModel.FK_mood_colorOfMood" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionByCoach_competition" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionHurdlesTest_competitionByCoach" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionJumpTest_competitionByCoach" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionLongDistanceTest_competitionByCoach" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionMiddleDistanceTest_competitionByCoach" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionRaceWalkingTest_competitionByCoach" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionRelaysTest_competitionByCoach" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionSpeedRaceTest_competitionByCoach" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionThrowsTest_competitionByCoach" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionJumpTest_competitionJumpTestType" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionRelaysTest_competitionRelayType" />
+        <AssociationConnector Association="group_sportsModel.FK_competitionThrowsTest_competitionThrowsTestType" />
+        <AssociationConnector Association="group_sportsModel.FK_jumpTest_jumpTestType" />
+        <AssociationConnector Association="group_sportsModel.FK_jumpTest_session" />
+        <AssociationConnector Association="group_sportsModel.FK_mesocycle_mesocycleType" />
+        <AssociationConnector Association="group_sportsModel.FK_mesocycle_trainingPlan" />
+        <AssociationConnector Association="group_sportsModel.FK_week_mesocycle" />
+        <AssociationConnector Association="group_sportsModel.FK_questionBySession_question" />
+        <AssociationConnector Association="group_sportsModel.FK_questionBySession_session" />
+        <AssociationConnector Association="group_sportsModel.FK_quizQuestion_quiz" />
+        <AssociationConnector Association="group_sportsModel.FK_quizQuestionByAthlete_quizQuestion" />
+        <AssociationConnector Association="group_sportsModel.FK_resistanceTest_session" />
+        <AssociationConnector Association="group_sportsModel.FK_session_shift" />
+        <AssociationConnector Association="group_sportsModel.FK_session_week" />
+        <AssociationConnector Association="group_sportsModel.FK_shotPutTest_session" />
+        <AssociationConnector Association="group_sportsModel.FK_speedTest_session" />
+        <AssociationConnector Association="group_sportsModel.FK_strengthTest_session" />
+        <AssociationConnector Association="group_sportsModel.FK_weightTestBySession_session" />
+        <AssociationConnector Association="group_sportsModel.FK_shotPutTest_shotPutType" />
+        <AssociationConnector Association="group_sportsModel.FK_strengthTest_strengthTestType" />
+        <AssociationConnector Association="group_sportsModel.FK_week_weekType" />
+        <EntityTypeShape EntityType="group_sportsModel.activeCaloriesWearable" Width="1.5" PointX="5.25" PointY="52.125" />
+        <EntityTypeShape EntityType="group_sportsModel.heartRateWearable" Width="1.5" PointX="5.25" PointY="55.125" />
+        <EntityTypeShape EntityType="group_sportsModel.stepsCountWearable" Width="1.5" PointX="5.25" PointY="91" />
+        <AssociationConnector Association="group_sportsModel.FK_ActiveCaloriesWearable_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_heartRateWearable_athelete" />
+        <AssociationConnector Association="group_sportsModel.FK_stepsCountWearable_athelete" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,71 @@
+﻿@model GroupSportsWeb.ViewModels.LstAthleteViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="content-page">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+
+
+        @foreach (var item in Model.lstAtletas)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => item.id)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+
+                <th>
+                    @Html.DisplayNameFor(model => item.firstName)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.firstName)
+                </td>
+                <th>
+                    @Html.DisplayNameFor(model => item.lastName)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lastName)
+                </td>
+
+                <th>
+                    @Html.DisplayNameFor(model => item.emailAddress)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.emailAddress)
+                </td>
+                @*<th>
+                    @Html.DisplayNameFor(model => item.edad)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.edad)
+                </td>
+                <th>
+                    @Html.DisplayNameFor(model => item.yearsOfExperience)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.yearsOfExperience)
+                </td>*@
+
+                <td>
+
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+        @Html.ActionLink("Details", "Details", new { id = item.id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.id }) |
+                    @Html.ActionLink("~/Test/Index", "IndexTest", "Teams", new { id = item.id })  |
+                  <a href="  @Url.Action("Create", "SpeedTest", new { id = item.id })">Ver más</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+    </div>

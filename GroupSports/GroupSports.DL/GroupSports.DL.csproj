@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F12099A-3717-45AD-B7C4-2C55F58083EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GroupSports.DL</RootNamespace>
+    <AssemblyName>GroupSports.DL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CONSTANTES\CONSTANTES.cs" />
+    <Compile Include="DALI\AnnouncementRepository.cs" />
+    <Compile Include="DALI\AntropometricTestRepository.cs" />
+    <Compile Include="DALI\AssistanceRepository.cs" />
+    <Compile Include="DALI\AthleteAchievementRepository.cs" />
+    <Compile Include="DALI\AthleteDetailsRepository.cs" />
+    <Compile Include="DALI\AthleteRepository.cs" />
+    <Compile Include="DALI\BinnacleDetailRepository.cs" />
+    <Compile Include="DALI\CoachCurriculumDetailRepository.cs" />
+    <Compile Include="DALI\CoachRepository.cs" />
+    <Compile Include="DALI\FodaRepository.cs" />
+    <Compile Include="DALI\IAnnouncementRepository.cs" />
+    <Compile Include="DALI\IAntropometricTestRepository.cs" />
+    <Compile Include="DALI\IAssistanceRepository.cs" />
+    <Compile Include="DALI\IAthleteAchievementRepository.cs" />
+    <Compile Include="DALI\IAthleteDetailsRepository.cs" />
+    <Compile Include="DALI\IAthleteRepository.cs" />
+    <Compile Include="DALI\IBinnacleDetailRepository.cs" />
+    <Compile Include="DALI\ICoachCurriculumDetailRepository.cs" />
+    <Compile Include="DALI\ICoachRepository.cs" />
+    <Compile Include="DALI\IFodaRepository.cs" />
+    <Compile Include="DALI\IJumpTestRepository.cs" />
+    <Compile Include="DALI\IJumpTestTypeRepository.cs" />
+    <Compile Include="DALI\IMesocycleRepository.cs" />
+    <Compile Include="DALI\IMesocycleTypeRepository.cs" />
+    <Compile Include="DALI\IMoodRepository.cs" />
+    <Compile Include="DALI\IQuizQuestionRepository.cs" />
+    <Compile Include="DALI\IQuizRepository.cs" />
+    <Compile Include="DALI\ISessionRepository.cs" />
+    <Compile Include="DALI\IShotPutTestRepository.cs" />
+    <Compile Include="DALI\ISpeedTestRepository.cs" />
+    <Compile Include="DALI\IStrengthTestRepository.cs" />
+    <Compile Include="DALI\IStrengthTestTypeRepository.cs" />
+    <Compile Include="DALI\ITeamRepository.cs" />
+    <Compile Include="DALI\ITrainingPlanRepository.cs" />
+    <Compile Include="DALI\IUserRepository.cs" />
+    <Compile Include="DALI\IWeekRepository.cs" />
+    <Compile Include="DALI\IWeightTestBySessionRepository.cs" />
+    <Compile Include="DALI\JumpTestRepository.cs" />
+    <Compile Include="DALI\JumpTestTypeRepository.cs" />
+    <Compile Include="DALI\MesocycleRepository.cs" />
+    <Compile Include="DALI\MesocycleTypeRepository.cs" />
+    <Compile Include="DALI\MoodRepository.cs" />
+    <Compile Include="DALI\QuizQuestionRepository.cs" />
+    <Compile Include="DALI\QuizRepository.cs" />
+    <Compile Include="DALI\ResistanceTestRepository.cs" />
+    <Compile Include="DALI\SessionRepository.cs" />
+    <Compile Include="DALI\ShotPutTestRepository.cs" />
+    <Compile Include="DALI\SpeedTestRepository.cs" />
+    <Compile Include="DALI\StrengthTestRepository.cs" />
+    <Compile Include="DALI\StrengthTestTypeRepository.cs" />
+    <Compile Include="DALI\TeamRepository.cs" />
+    <Compile Include="DALI\TrainingPlanRepository.cs" />
+    <Compile Include="DALI\UserRepository.cs" />
+    <Compile Include="DALI\WeekRepository.cs" />
+    <Compile Include="DALI\WeightTestBySessionRepository.cs" />
+    <Compile Include="DM\activeCaloriesWearable.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\announcement.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\announcementByAthlete.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\anthropometricTest.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\athelete.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\atheleteByParameter.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\atheleteByTeam.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\athleteAchievement.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\athleteAchievementType.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\athleteDetails.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\athleteFoda.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\athleteQuiz.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\binnacleDetail.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\coach.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\coachByAthelete.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\coachByTeam.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\coachCurriculumDetail.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\colorOfMood.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\competition.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\competitionByCoach.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\competitionHurdlesTest.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\competitionJumpTest.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\competitionJumpTestType.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\competitionLongDistanceTest.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\competitionMiddleDistanceTest.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\competitionRaceWalkingTest.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\competitionRelaysTest.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\competitionRelayType.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\competitionSprintsTest.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\competitionThrowsTest.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\competitionThrowsTestType.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\discipline.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\DTO\AnnouncementDTO.cs" />
+    <Compile Include="DM\DTO\AnnouncementForAthletesDTO.cs" />
+    <Compile Include="DM\DTO\AssistanceDTO.cs" />
+    <Compile Include="DM\DTO\AssistanceShiftDTO.cs" />
+    <Compile Include="DM\DTO\AssistanceUpdatesDTO.cs" />
+    <Compile Include="DM\DTO\AthleteDTO.cs" />
+    <Compile Include="DM\DTO\AthleteIdDTO.cs" />
+    <Compile Include="DM\DTO\athleteQuizDTO.cs" />
+    <Compile Include="DM\DTO\AthleteSaltabilityPerformanceDTO.cs" />
+    <Compile Include="DM\DTO\AthleteSpeedPerformanceDTO.cs" />
+    <Compile Include="DM\DTO\CoachDTO.cs" />
+    <Compile Include="DM\DTO\LoginDTO.cs" />
+    <Compile Include="DM\DTO\NewAthleteResponseDTO.cs" />
+    <Compile Include="DM\DTO\QuizDTO.cs" />
+    <Compile Include="DM\DTO\SessionDTO.cs" />
+    <Compile Include="DM\fodaItemType.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\GroupSportsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GroupSportsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\GroupSportsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\GroupSportsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GroupSportsModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DM\heartRateWearable.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\jumpTest.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\jumpTestType.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\mesocycle.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\mesocycleType.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\mood.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\parameter.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\question.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\questionBySession.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\quiz.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\quizQuestion.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\quizQuestionByAthlete.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\resistanceTest.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\session.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\shift.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\shotPutTest.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\shotPutType.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\speedTest.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\stepsCountWearable.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\strengthTest.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\strengthTestType.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\sysdiagrams.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\team.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\trainingPlan.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\user.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\week.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\weekType.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM\weightTestBySession.cs">
+      <DependentUpon>GroupSportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DALI\IResistanceTestRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="DM\GroupSportsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GroupSportsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DM\GroupSportsModel.edmx.diagram">
+      <DependentUpon>GroupSportsModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DM\GroupSportsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GroupSportsModel.edmx</DependentUpon>
+      <LastGenOutput>GroupSportsModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DM\GroupSportsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GroupSportsModel.edmx</DependentUpon>
+      <LastGenOutput>GroupSportsModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+</Project>

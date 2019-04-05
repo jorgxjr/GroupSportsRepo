@@ -1,0 +1,70 @@
+﻿@model GroupSports.DL.DM.DTO.SessionDTO
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<div class="content-page">
+
+    <div style="margin: 30px">
+        <h4>Sessions</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.id)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.id)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.sessionDay)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.sessionDay)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.intensityPercentage)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.intensityPercentage)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.attendance)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.attendance)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.username)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.username)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.trainingPlanName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.trainingPlanName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.mesocycleName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.mesocycleName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.shift.shiftName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.shift.shiftName)
+            </dd>
+        </dl>
+    </div>
+    <p style="margin-left: 30px">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+
+</div>

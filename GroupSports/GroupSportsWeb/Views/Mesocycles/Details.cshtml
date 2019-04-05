@@ -1,0 +1,67 @@
+﻿@model GroupSports.DL.DM.mesocycle
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<div class="content-page">
+    <div style="margin: 30px">
+        <h4>mesocycle</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.numberOfIntenseWeeks)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.numberOfIntenseWeeks)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.numberOfRestWeeks)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.numberOfRestWeeks)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.startDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.startDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.endDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.endDate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.mesocycleType)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.mesocycleType.mesocycleName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.trainingPlan.name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.trainingPlan.name)
+            </dd>
+
+        </dl>
+    </div>
+    <p style="margin: 30px">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index", new { id = Model.trainingPlanId })
+    </p>
+</div>

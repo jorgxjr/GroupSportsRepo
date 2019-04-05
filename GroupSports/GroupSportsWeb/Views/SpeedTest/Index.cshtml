@@ -1,0 +1,337 @@
+﻿
+
+@model GroupSportsWeb.ViewModels.SpeedTestViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<style>
+    .btn-group button {
+        background-color: #4CAF50; /* Green background */
+        border: 1px solid green; /* Green border */
+        color: white; /* White text */
+        padding: 10px 24px; /* Some padding */
+        cursor: pointer; /* Pointer/hand icon */
+        float: left; /* Float the buttons side by side */
+    }
+
+    /* Clear floats (clearfix hack) */
+    .btn-group:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .btn-group button:not(:last-child) {
+        border-right: none; /* Prevent double borders */
+    }
+
+    /* Add a background color on hover */
+    .btn-group button:hover {
+        background-color: #3e8e41;
+    }
+</style>
+<h2>Index</h2>
+<div class="content-page">
+    <div class="btn-group" style="margin-top:30px; margin-bottom:20px; width:100%">
+        <button onclick="location.href='@Url.Action("Index", "SpeedTest", new { id = Session["aID"]})';return false;" style="width:14.28%">Rapidez</button>
+        <button onclick="location.href='@Url.Action("Index", "Wearable", new { id = Session["aID"]})';return false;" style="width:14.28%">Wearable</button>
+        <button onclick="location.href='@Url.Action("Index", "JumpTest", new { id = Session["aID"]})';return false;" style="width:14.28%">Salto</button>
+        <button onclick="location.href='@Url.Action("Index", "StrengthTest", new { id = Session["aID"]})';return false;" style="width:14.28%">Fuerza</button>
+        <button onclick="location.href='@Url.Action("Index", "WeightTestBySession", new { id = Session["aID"]})';return false;" style="width:14.28%">Peso Corporal</button>
+        <button onclick="location.href='@Url.Action("Index", "ShotPutTest", new { id = Session["aID"]})';return false;" style="width:14.28%">Lanzamiento</button>
+        <button onclick="location.href='@Url.Action("Index", "AntropometricTest", new { id = Session["aID"]})';return false;" style="width:14.28%">Antropométrico</button>
+
+
+    </div>
+    @*<pre id="data" style="white-space: pre-wrap">Date,Construction output
+
+
+        @foreach (var item in Model.lstSpeedTst)
+        {
+            var Fechaa = item.date.ToShortDateString();
+            var fullName = item.hours + ":" + item.minutes + ":" + item.seconds + ":" + item.milliseconds;
+            var tempo = item.hours*3600000+ item.minutes*60000 + item.seconds*1000+ item.milliseconds;
+            var nuevo = Fechaa + "," + tempo;
+
+            @Html.Raw(nuevo)
+        }
+        </pre>*@
+    @*<pre id="data">Date,Construction output
+        06/30/2014,5.3
+        05/31/2014,3.9
+        04/30/2014,4.6
+        03/31/2014,6.8
+        02/28/2014,3.9
+        01/31/2014,5.7
+        12/31/2013,4.9
+        11/30/2013,0.3
+        10/31/2013,5.1
+        09/30/2013,7.6
+        08/31/2013,5
+        07/31/2013,4.2
+        06/30/2013,3.4
+        05/31/2013,-1.8
+        04/30/2013,1
+        03/31/2013,-5.8
+        02/28/2013,-3.7
+        01/31/2013,-5.4
+        12/31/2012,-12.1
+        11/30/2012,-6.3
+        10/31/2012,-5.5
+        09/30/2012,-12.4
+        08/31/2012,-9.4
+        07/31/2012,-9
+        06/30/2012,-13.3
+        05/31/2012,-5.7
+        04/30/2012,-9.1
+        03/31/2012,-7.9
+        02/29/2012,-4.4
+        01/31/2012,-2.6
+        12/31/2011,5
+        11/30/2011,-0.2
+        10/31/2011,-1.8
+        09/30/2011,-1.1
+        08/31/2011,-1.6
+        07/31/2011,0.9
+        06/30/2011,1.7
+        05/31/2011,2.7
+        04/30/2011,2.1
+        03/31/2011,6.2
+        02/28/2011,5.1
+        01/31/2011,9.8</pre>*@
+    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+    <table class="table" id="datatable">
+        @foreach (var item in Model.lstSpeedTst2)
+        {
+        <tr>
+            <th>
+                Metros
+            </th>
+            <td>
+                @Html.DisplayFor(m => item.meters)
+            </td>
+
+            <th>
+                Fecha
+            </th>
+            <td>
+                @{
+                    var Fechaa = item.date.ToShortDateString();
+                    @Html.DisplayFor(m => Fechaa)
+                }
+            </td>
+
+
+            <th>
+                Duración
+            </th>
+            <td>
+                @{
+                    var fullName = item.hours + ":" + item.minutes + ":" + item.seconds + ":" + item.milliseconds;
+                    @Html.DisplayFor(m => fullName)
+                }
+            </td>
+            <th>
+                Pulso
+            </th>
+            <td>
+                @Html.DisplayFor(m => item.heartRate)
+
+            </td>
+            <th>
+                Pasos
+            </th>
+            <td>
+                @Html.DisplayFor(m => item.stepsCount)
+
+            </td>
+            <th>
+                Calorías Quemadas
+            </th>
+            <td>
+                @Html.DisplayFor(m => item.energyBurned)
+
+            </td>
+
+        </tr>
+        }
+
+    </table>
+
+    @*<button id="button" class="autocompare">Siguiente</button>*@
+    <script>
+
+        //Highcharts.chart('container', {
+        //    data: {
+        //        csv: document.getElementById('data').innerHTML
+        //    },
+        //    yAxis: {
+        //        title: {
+        //            text: 'Share prices'
+        //        }
+        //    },
+        //    plotOptions: {
+        //        series: {
+        //            marker: {
+        //                enabled: false
+        //            }
+        //        }
+        //    },
+        //    title: {
+        //        text: 'Royal Mail shares over time'
+        //    },
+        //    subtitle: {
+        //        text: 'Auto-detection of <em>mm/dd/YYYY</em> dates in Highcharts Data module'
+        //    }
+        //});
+        $(document).ready(function () {
+            $.getJSON("/SpeedTest/GetData", function (data) {
+
+
+
+                Highcharts.chart('container', {
+                    chart: {
+                        zoomType: 'x'
+                    },
+                    title: {
+                        text: 'Evolución de velocidad'
+                    },
+                    subtitle: {
+                        text: 'Tests de velocidad del atleta a lo largo del tiempo'
+                    },
+                    xAxis: {
+                        categories: data.fechaT,
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Tiempo'
+                        }
+                    },
+                    plotOptions: {
+                        line: {
+                            dataLabels: {
+                                enabled: true
+                            },
+                            enableMouseTracking: true
+                        }
+                    },
+
+                    series: [{
+                        name: '10 metros',
+
+                        data: data.tiempoT1,
+                    }, {
+                            name: '20 metros',
+
+                            data: data.tiempoT2
+                    }, {
+                            name: '30 metros',
+
+                            data: data.tiempoT3
+                    }, {
+                            name: '40 metros',
+
+                            data: data.tiempoT4
+                    }, {
+                            name: '50 metros',
+
+                            data: data.tiempoT5
+                    }, {
+                            name: '60 metros',
+
+                            data: data.tiempoT6
+                    }, {
+                            name: '100 metros ',
+
+                            data: data.tiempoT7
+                    }, {
+                            name: '200 metros',
+
+                            data: data.tiempoT8
+                    }, {
+                            name: '400 metros',
+
+                            data: data.tiempoT9
+                    }]
+
+                });
+
+            });
+        });
+
+
+
+    </script>
+
+
+    @*<table id="customers" class="table table-bordered">
+
+            <thead>
+                <tr>
+                    <th>
+                        Metros
+                    </th>
+                    <th>
+                        Fecha
+                    </th>
+                    <th>
+                        Duración
+                    </th>
+                    <th>
+                        Pulso
+                    </th>
+
+                </tr>
+            </thead>
+            @foreach (var item in Model.lstSpeedTst)
+            {
+                <tbody>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.meters)
+                        </td>
+
+
+                        <td>
+                            @{
+                                var Fechaa = item.date.ToShortDateString();
+                                @Html.DisplayFor(m => Fechaa)
+                            }
+                        </td>
+
+                        <td>
+                            @{
+                                var fullName = item.hours + ":" + item.minutes + ":" + item.seconds + ":" + item.milliseconds;
+                                @Html.DisplayFor(m => fullName)
+                            }
+                        </td>
+
+
+                        <td>
+                            @Html.DisplayFor(m => item.heartRate)
+                        </td>
+
+
+
+                    </tr>
+                </tbody>
+            }
+
+        </table>*@
+    <button onclick="location.href='@Url.Action("Create", "SpeedTest", new { id = Session["aID"]})';return false;">Agregar Test</button>
+
+    <div class="btn-group" style="margin-top:30px; margin-bottom:20px; width:100%">
+        <button onclick="location.href='@Url.Action("Index", "SpeedTest", new { id = Session["aID"]})';return false;" style="width:25%">Test</button>
+        <button onclick="location.href='@Url.Action("Index", "AthleteDetails", new { id = Session["aID"]})';return false;" style="width:25%">Detalles</button>
+        <button onclick="location.href='@Url.Action("Index", "Foda", new { id = Session["aID"]})';return false;" style="width:25%">Foda</button>
+        <button onclick="location.href='@Url.Action("Index", "AthleteAchievement", new { id = Session["aID"]})';return false;" style="width:25%">Logros</button>
+
+
+    </div>
+</div>

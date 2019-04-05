@@ -1,0 +1,39 @@
+﻿@model GroupSportsWeb.ViewModels.LoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+<h2>Index</h2>
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+            @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+            { 
+
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+
+                <table>
+                    <tr style="text-align">
+                        <td>@Html.LabelFor(a => a.userName,labelText:"Usuario")</td>
+                        <td>@Html.EditorFor(a => a.userName, new { htmlAttributes = new { @class = "form-control", placeholder = "Username" } })</td>
+                        <td>@Html.ValidationMessageFor(a => a.userName)</td>
+                    </tr>
+                    <tr style="text-align">
+                        <td>@Html.LabelFor(a => a.password, labelText: "Contraseña")</td>
+                        <td>@Html.EditorFor(a => a.password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password", @type = "password" } })</td>
+                        <td>@Html.ValidationMessageFor(a => a.password)</td>
+                    </tr>
+                   
+                    <tr style="text-align">
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Login" />
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            }
+        </div>
+    </div>
+</div>

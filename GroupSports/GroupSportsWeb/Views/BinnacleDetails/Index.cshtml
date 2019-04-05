@@ -1,0 +1,45 @@
+﻿@model IEnumerable<GroupSports.DL.DM.binnacleDetail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div class="content-page">
+    <p style="margin-top: 30px; margin-left: 15px; margin-right: 15px">
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table" style="margin-left: 15px">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.detail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.available)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.detail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.available)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </table>
+
+    <div style="margin-top: 30px; margin-left: 15px; margin-right: 15px">
+        @Html.ActionLink("Back to Sessions", "Index", "Sessions")
+    </div>
+
+</div>

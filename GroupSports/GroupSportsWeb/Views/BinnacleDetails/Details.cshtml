@@ -1,0 +1,44 @@
+﻿@model GroupSports.DL.DM.binnacleDetail
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<div class="content-page">
+    <div style="margin: 30px">
+        <h4>binnacleDetail</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.detail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.detail)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.available)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.available)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.session.id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.session.id)
+            </dd>
+
+        </dl>
+    </div>
+    <p style="margin: 30px">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index", new { id = Model.sessionId })
+    </p>
+</div>

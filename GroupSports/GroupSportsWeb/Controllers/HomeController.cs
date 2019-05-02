@@ -7,10 +7,13 @@ using GroupSportsWeb.ViewModels;
 using GroupSports.DL.DM;
 using System.Web.Security;
 
+
 namespace GroupSportsWeb.Controllers
 {
     public class HomeController : Controller
     {
+        
+
 
         public ActionResult Index()
         {
